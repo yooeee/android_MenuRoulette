@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mobile_background"
+    tools:context=".MainActivity">
+
+    <CheckBox
+        android:id="@+id/checkbox_KOR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        android:onClick="onCheckboxClicked"
+        android:text="한식"
+        app:layout_constraintBaseline_toBaselineOf="@+id/checkbox_USA"
+        app:layout_constraintEnd_toStartOf="@+id/checkbox_USA"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkbox_USA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="onCheckboxClicked"
+        android:text="양식"
+        app:layout_constraintBottom_toTopOf="@+id/checkbox_BS"
+        app:layout_constraintEnd_toStartOf="@+id/checkbox_JP"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_KOR" />
+
+    <CheckBox
+        android:id="@+id/checkbox_JP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:onClick="onCheckboxClicked"
+        android:text="일식"
+        app:layout_constraintEnd_toStartOf="@+id/checkbox_CHA"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_USA"
+        app:layout_constraintTop_toTopOf="@+id/checkbox_USA" />
+
+    <CheckBox
+        android:id="@+id/checkbox_CHA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        android:onClick="onCheckboxClicked"
+        android:text="중식"
+        app:layout_constraintBaseline_toBaselineOf="@+id/checkbox_JP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_JP" />
+
+    <CheckBox
+        android:id="@+id/checkbox_BS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="207dp"
+        android:onClick="onCheckboxClicked"
+        android:text="분식"
+        app:layout_constraintEnd_toStartOf="@+id/checkbox_USA"
+        app:layout_constraintStart_toStartOf="@+id/checkbox_USA"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkbox_YS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="onCheckboxClicked"
+        android:text="야식"
+        app:layout_constraintEnd_toEndOf="@+id/checkbox_CHA"
+        app:layout_constraintTop_toBottomOf="@+id/checkbox_CHA" />
+
+    <TextView
+        android:id="@+id/Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="106dp"
+        android:text="0개의 음식이 준비되어있습니다!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkbox_YS" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="42dp"
+        android:background="#1E2A71"
+        android:text="뽑으러가기"
+        app:layout_constraintEnd_toEndOf="@+id/Text"
+        app:layout_constraintTop_toBottomOf="@+id/Text" />
+</androidx.constraintlayout.widget.ConstraintLayout>
